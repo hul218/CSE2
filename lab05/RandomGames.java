@@ -5,12 +5,12 @@ public class RandomGames {
         Scanner MS;
         MS=new Scanner( System.in );
         System.out.print("Enter R or r for Roulette, C or c for craps, P or p for pick a card: ");
-        String cc=MS.nextString();
+        char cc=MS.next();
         int i=cc.length();
         switch (i) {
             case 1:
                 switch (cc) {
-                    case R||r:
+                    case 'R'||'r':
                         int RN=(int) (Math.random()*38);
                         switch (RN) {
                             case 37:
@@ -20,12 +20,12 @@ public class RandomGames {
                                 System.out.println("Roulette: "+RN);
                         }
                     break;
-                    case C||c:
+                    case 'C'||'c':
                         int R1=(int) ((Math.random()*6)+1);
                         int R2=(int) ((Math.random()*6)+1);
                         System.out.println("Craps: "+R1+"+"+R2+"="+(R1+R2));
                         break;
-                    case P||p:
+                    case 'P'||'p':
                         int No=(int) ((Math.random()*15)+1);
                         int suit=(int) ((Math.random()*4)+1);
                         switch (No) {
