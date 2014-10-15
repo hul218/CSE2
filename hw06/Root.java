@@ -1,25 +1,26 @@
-//Huanlun Li[CSE02-110] Root.java 10/12/2014
+//Huanlun Li [CSE02-110] Root.java 10/12/2014
 import java.util.Scanner;
 public class Root {
     public static void main(String[] args) {
         Scanner input = new Scanner( System.in );
         System.out.print("Enter a double that is greater than 0: ");
-        if (input.hasNextDouble()) {
+        if (input.hasNextDouble()) { //ensure user enter a number
             double x=input.nextDouble();
-            if (x>0) {
+            if (x>0) { //ensure user enter a positive number
                 double low=0;
                 double high=x+1;
-                double diff=x+1;
+                double diff=high-low;
                 double middle=0;
-                while (diff>=0.0000001*(x+1)) {
-                    middle=high/2.0;
-                    if (middle*middle>x) {
-                        high=middle*middle;
+                while (diff>=0.0000001*(x+1)) { //loop will stop when the difference of high and low is small enough
+                    middle=(high+low)/2; 
+                    double midsqu=(middle*middle); //midsqu is the square of middle number
+                    if (midsqu>x) {
+                        high=middle;
                     }
-                    else if (middle*middle<x) {
-                        low=middle*middle;
+                    else if (midsqu<x) {
+                        low=middle;
                     }
-                    diff=high-low;
+                    diff=(high-low);
                 }
                 System.out.println("The square root of "+x+" is about "+middle);
             }
