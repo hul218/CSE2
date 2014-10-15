@@ -6,7 +6,7 @@ public class Root {
         System.out.print("Enter a double that is greater than 0: ");
         if (input.hasNextDouble()) { //ensure user enter a number
             double x=input.nextDouble();
-            if (x>0) { //ensure user enter a positive number
+            if (x>=0) { //ensure user enter a positive number
                 double low=0;
                 double high=x+1;
                 double diff=high-low;
