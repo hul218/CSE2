@@ -14,24 +14,29 @@ public class Methods{
   	  {return true;}
   	else 
   	  {return false;}
-  	
+  }
+  
+  	public static int getInt( Scanner three ){
+  if (three.hasNextInt()) {
+  	int th=three.nextInt();
+  	return th;
+  }
+  else {
+  	Scanner thr;
+  	do{
+      thr=new Scanner(System.in);
+      System.out.print("You did not enter an int; try again ");
+      
+  	}while (!thr.hasNextInt());
+  	int thre=thr.nextInt();
+  	return thre;
+  }
   }
   
   public static void main(String [] arg){
 	Scanner scan=new Scanner(System.in);
 	int a,b,c;
 	System.out.println("Enter three ints");
-	public static int getInt ( String scanner ){
-  int result;
-  if (scan.hasNextInt()) {
-    result=scan.nextInt();
-  }
-  else {
-      System.out.print("You did not enter an int; try again ");
-      result=Scanner(System.in);
-  }
-  return result;
-  }
 	a=getInt(scan);
 	b=getInt(scan);
 	c=getInt(scan);
