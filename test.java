@@ -1,10 +1,19 @@
 public class test{
 
 public static void main(String[] args) {
-int i = 6;
-          printPattern(i);
+ int[] A = {4, 9-2, 25, -7, 13, 23, -16};
+for(int i = 0; i<=A.length; i++){
+		A[i/2]*=2;
+}
+for (int j=0;j<A.length;j++){
+System.out.println(A[j]);
+}
      }
 
+     
+     
+     
+/*
 public static void printPattern(int i) {
         // Fill in the code here to print the 
    // pattern.
@@ -21,4 +30,5 @@ System.out.print((j+1) +" ");
            System.out.print("\n");
        }
      }
+*/
 }
